@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>giftee 3days Internship | 経営判断のリアルを知る</title>
+<meta name="description" content="東証プライム上場企業ギフティの3daysインターンシップ。スタートアップとの協業で新規事業を創出する。代表取締役2名と協業先CEOが審査。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1A1A2E;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background: #0F1B2D;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===== Variables ===== */
+:root {
+  --navy: #0F1B2D;
+  --navy-light: #142236;
+  --deep-blue: #1A3A5C;
+  --bright-blue: #2E8BF7;
+  --bright-blue-light: #5BA3F9;
+  --cyan: #00D4FF;
+  --white: #FFFFFF;
+  --dark-text: #1A1A2E;
+  --light-bg: #F5F6FA;
+  --gold: #E8B94A;
+  --gold-dim: #D4A853;
+  --footer-bg: #080E18;
+  --font-en: 'Inter', sans-serif;
+  --gradient-blue: linear-gradient(135deg, #2E8BF7, #00D4FF);
+  --gradient-gold: linear-gradient(135deg, #E8B94A, #F0D68A);
+  --card-border: rgba(255,255,255,0.06);
+  --card-bg: rgba(255,255,255,0.03);
+}
+
+/* ===== Utilities ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section-label {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.section-label--blue {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-label--gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-heading {
+  font-size: clamp(28px, 4.5vw, 42px);
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+.section-lead {
+  font-size: 15px;
+  line-height: 2;
+  max-width: 680px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-blue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(46, 139, 247, 0.3);
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+.btn-primary:hover::before { left: 100%; }
+.btn-primary:hover {
+  box-shadow: 0 8px 40px rgba(46, 139, 247, 0.5);
+  transform: translateY(-2px);
+}
+.btn-primary--large {
+  font-size: 18px;
+  padding: 20px 56px;
+  border-radius: 14px;
+  box-shadow: 0 6px 30px rgba(46, 139, 247, 0.4);
+}
+.btn-primary--small {
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(46, 139, 247, 0.25);
+}
+
+/* ===== Fade-in + Stagger ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger > .fade-in:nth-child(1) { transition-delay: 0s; }
+.stagger > .fade-in:nth-child(2) { transition-delay: 0.1s; }
+.stagger > .fade-in:nth-child(3) { transition-delay: 0.2s; }
+.stagger > .fade-in:nth-child(4) { transition-delay: 0.3s; }
+.stagger > .fade-in:nth-child(5) { transition-delay: 0.4s; }
+
+/* ===== Gradient Divider ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(46,139,247,0.3), transparent);
+  border: none;
+}
+
+/* ===== Nav ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  background: rgba(15, 27, 45, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.3s;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.nav.scrolled {
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  background: rgba(15, 27, 45, 0.95);
+}
+.nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.nav__logo {
+  font-family: var(--font-en);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.nav__logo span:first-child {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nav__logo span:nth-child(2) { color: rgba(255,255,255,0.3); margin: 0 8px; }
+.nav__logo span:last-child { color: var(--white); }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy);
+  padding-top: 64px;
+  overflow: hidden;
+}
+/* Background image layer */
+.hero__img {
+  position: absolute; inset: 0;
+  /* ▼ 画像を差し替えるにはここのURLを変更 ▼ */
+  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&q=80');
+  background-size: cover;
+  background-position: center 40%;
+  filter: grayscale(0.15) contrast(1.15) brightness(0.95);
+}
+/* Dark overlay gradient */
+.hero__overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(135deg, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.75) 40%, rgba(15,27,45,0.6) 70%, rgba(15,27,45,0.85) 100%);
+}
+/* Geometric accent shapes */
+.hero__geo {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero__geo::before {
+  content: '';
+  position: absolute;
+  top: -15%; right: -5%;
+  width: 55vw; height: 120%;
+  background: linear-gradient(145deg, rgba(46,139,247,0.08), transparent 60%);
+  transform: skewX(-12deg);
+}
+.hero__geo::after {
+  content: '';
+  position: absolute;
+  top: 10%; right: 8%;
+  width: 35vw; height: 80%;
+  border: 1px solid rgba(255,255,255,0.06);
+  transform: skewX(-12deg);
+}
+/* Subtle grid pattern */
+.hero__grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+/* Accent line */
+.hero__accent-line {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-blue);
+  opacity: 0.6;
+}
+.hero__content {
+  position: relative; z-index: 1;
+  color: var(--white);
+  padding: 80px 0 60px;
+}
+.hero__presented {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.hero__title {
+  font-size: clamp(38px, 7vw, 68px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 28px;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.hero__title-accent {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero__subtitle {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 2;
+  color: rgba(255,255,255,0.75);
+  max-width: 620px;
+  margin-bottom: 48px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+.hero__badges {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+}
+.hero__badge {
+  background: rgba(15,27,45,0.5);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 24px 32px;
+  min-width: 155px;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s;
+}
+.hero__badge:hover {
+  border-color: rgba(46,139,247,0.4);
+  background: rgba(15,27,45,0.65);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+.hero__badge-number {
+  font-family: var(--font-en);
+  font-size: 40px;
+  font-weight: 900;
+  display: block;
+  line-height: 1.1;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero__badge-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 6px;
+  display: block;
+  letter-spacing: 0.5px;
+}
+.hero__cta { margin-bottom: 64px; }
+.hero__scroll {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+.hero__scroll:hover { color: rgba(255,255,255,0.6); }
+.hero__scroll-arrow {
+  font-size: 16px;
+  display: inline-block;
+  animation: scrollBounce 2.5s ease-in-out infinite;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* ===== Section: Why Now ===== */
+.why-now {
+  background: var(--white);
+  padding: 120px 0;
+  position: relative;
+}
+.why-now .section-heading { color: var(--dark-text); }
+.why-now .section-lead { color: #555; margin-bottom: 64px; }
+
+/* Timeline */
+.timeline {
+  display: flex;
+  gap: 0;
+  margin-bottom: 64px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.timeline__step {
+  flex: 1;
+  min-width: 165px;
+  position: relative;
+  padding: 28px 20px;
+  background: var(--light-bg);
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.timeline__step:hover { border-color: #ddd; }
+.timeline__step--active {
+  background: var(--gradient-blue);
+  color: var(--white);
+  box-shadow: 0 8px 32px rgba(46, 139, 247, 0.3);
+  border-color: transparent;
+}
+.timeline__step-time {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.timeline__step--active .timeline__step-time { opacity: 0.85; }
+.timeline__step-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.timeline__step-sub {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0.8;
+  font-weight: 600;
+}
+.timeline__arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  color: #ccc;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Merit cards */
+.merit-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.merit-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #EAEDF3;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+.merit-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--gradient-blue);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.merit-card:hover {
+  border-color: rgba(46,139,247,0.2);
+  box-shadow: 0 8px 32px rgba(46, 139, 247, 0.08);
+  transform: translateY(-4px);
+}
+.merit-card:hover::before { opacity: 1; }
+.merit-card__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.merit-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: var(--dark-text);
+}
+.merit-card__text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.9;
+}
+
+/* ===== Section: What's Different ===== */
+.whats-different {
+  background: var(--navy);
+  color: var(--white);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.whats-different::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 600px; height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(46,139,247,0.08), transparent 70%);
+  border-radius: 50%;
+}
+.whats-different .section-lead {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 64px;
+}
+.compare-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.compare-table__header {
+  padding: 24px 32px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+.compare-table__header--normal {
+  background: rgba(255,255,255,0.02);
+  color: rgba(255,255,255,0.3);
+}
+.compare-table__header--giftee {
+  background: rgba(46, 139, 247, 0.1);
+  color: var(--bright-blue);
+  position: relative;
+}
+.compare-table__cell {
+  padding: 22px 32px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.compare-table__cell--normal {
+  background: rgba(255,255,255,0.015);
+  color: rgba(255,255,255,0.28);
+}
+.compare-table__cell--giftee {
+  background: rgba(46, 139, 247, 0.04);
+  color: rgba(255,255,255,0.9);
+  border-left: 2px solid rgba(46,139,247,0.2);
+}
+
+/* ===== Section: About Giftee ===== */
+.about-giftee {
+  background: var(--light-bg);
+  padding: 120px 0;
+}
+.about-giftee .section-lead { color: #555; margin-bottom: 56px; }
+.gap-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 56px;
+}
+.gap-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px 32px;
+  border: 1px solid #EAEDF3;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.gap-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+.gap-card__before {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: line-through;
+  text-decoration-color: rgba(0,0,0,0.15);
+}
+.gap-card__before::before {
+  content: '';
+  width: 20px; height: 20px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gap-card__arrow {
+  text-align: center;
+  margin: 12px 0;
+  position: relative;
+}
+.gap-card__arrow::before {
+  content: '';
+  display: block;
+  width: 2px; height: 24px;
+  background: var(--gradient-blue);
+  margin: 0 auto;
+  border-radius: 1px;
+}
+.gap-card__arrow::after {
+  content: '';
+  display: block;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--bright-blue);
+  border-bottom: 2px solid var(--bright-blue);
+  transform: rotate(45deg);
+  margin: -4px auto 0;
+}
+.gap-card__after {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(46,139,247,0.04), rgba(0,212,255,0.02));
+  border-radius: 12px;
+  padding: 16px;
+}
+.gap-card__after::before {
+  content: '';
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: var(--gradient-blue);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: 13px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gap-card__after-text { font-size: 14px; line-height: 1.8; }
+.gap-card__after-text strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--dark-text);
+  margin-bottom: 4px;
+}
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  padding: 48px 0;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid #EAEDF3;
+  position: relative;
+  overflow: hidden;
+}
+.stats-bar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-blue);
+}
+.stats-bar__item { text-align: center; }
+.stats-bar__number {
+  font-family: var(--font-en);
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.stats-bar__number span { font-size: 0.5em; font-weight: 700; color: #888; }
+.stats-bar__label {
+  font-size: 13px;
+  color: #888;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.about-giftee__note {
+  font-size: 14px;
+  color: #555;
+  line-height: 2.1;
+  max-width: 720px;
+  background: var(--white);
+  padding: 32px;
+  border-radius: 16px;
+  border-left: 4px solid var(--bright-blue);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+/* ===== Section: Program ===== */
+.program {
+  background: var(--white);
+  padding: 120px 0;
+}
+.program .section-lead { color: #555; margin-bottom: 64px; }
+.day-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 32px;
+  position: relative;
+}
+/* Vertical connector line */
+.day-cards::before {
+  content: '';
+  position: absolute;
+  top: 36px; bottom: 36px;
+  left: 27px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--bright-blue), var(--cyan));
+  border-radius: 1px;
+}
+.day-card {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding: 32px;
+  padding-left: 60px;
+  position: relative;
+  background: transparent;
+  transition: all 0.3s;
+  border-radius: 16px;
+}
+.day-card:hover { background: var(--light-bg); }
+/* Circle on the timeline */
+.day-card::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 36px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-blue);
+  box-shadow: 0 0 0 4px var(--white), 0 0 0 6px rgba(46,139,247,0.2);
+}
+.day-card__day {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  padding: 4px 12px;
+  border-radius: 6px;
+  min-width: auto;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.day-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark-text);
+}
+.day-card__text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.9;
+}
+.program__note {
+  font-size: 13px;
+  color: #aaa;
+  padding-left: 60px;
+}
+
+/* ===== Section: Mentors & Judges ===== */
+.mentors {
+  background: var(--navy);
+  color: var(--white);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.mentors::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(232,185,74,0.06), transparent 70%);
+  border-radius: 50%;
+}
+.mentors .section-lead { color: rgba(255,255,255,0.6); margin-bottom: 56px; }
+.person-group { margin-bottom: 48px; }
+.person-group__title {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.person-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.person-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: flex-start;
+}
+.person-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.person-card:hover {
+  border-color: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+}
+.person-card--highlight {
+  border-color: rgba(46,139,247,0.25);
+  background: rgba(46, 139, 247, 0.05);
+}
+.person-card--highlight::before {
+  background: linear-gradient(135deg, rgba(46,139,247,0.3), transparent);
+}
+.person-card__badge {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: var(--gradient-blue);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(46,139,247,0.3);
+}
+.person-card__avatar {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--deep-blue), var(--navy-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-en);
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.4);
+  border: 3px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.person-card__avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.person-card__info {
+  flex: 1;
+  min-width: 0;
+}
+.person-card__name {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 2px;
+  letter-spacing: 0.02em;
+}
+.person-card__name-reading {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 8px;
+}
+.person-card__role {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: inline-block;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.person-card__bio {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.9;
+  flex-grow: 1;
+}
+.person-card__highlight-text {
+  font-size: 13px;
+  margin-top: 16px;
+  line-height: 1.8;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(232,185,74,0.08);
+  border: 1px solid rgba(232,185,74,0.15);
+  background-image: none;
+  -webkit-text-fill-color: unset;
+  color: var(--gold);
+}
+.mentors__note {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+  padding: 28px 32px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  border-left: 3px solid var(--gold);
+  max-width: 700px;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Section: Voice ===== */
+.voice {
+  background: var(--light-bg);
+  padding: 120px 0;
+}
+.voice .section-lead { color: #555; margin-bottom: 56px; }
+.voice-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 64px;
+}
+.voice-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px;
+  border: 1px solid #EAEDF3;
+  position: relative;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+.voice-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+.voice-card__quote-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 80px;
+  line-height: 1;
+  position: absolute;
+  top: 12px; left: 28px;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.15;
+}
+.voice-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-top: 24px;
+  line-height: 1.6;
+  color: var(--dark-text);
+}
+.voice-card__text {
+  font-size: 13px;
+  color: #666;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+.voice-card__author {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.destinations { margin-top: 8px; }
+.destinations__title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--dark-text);
+}
+.destinations__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.destinations__badge {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  background: var(--white);
+  border: 1px solid #D8DAE0;
+  border-radius: 100px;
+  white-space: nowrap;
+  color: #555;
+  transition: all 0.3s;
+}
+.destinations__badge:hover {
+  border-color: var(--bright-blue);
+  color: var(--bright-blue);
+  background: rgba(46,139,247,0.04);
+}
+
+/* ===== Section: Who Should Apply ===== */
+.who {
+  background: var(--white);
+  padding: 120px 0;
+}
+.who-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 56px;
+}
+.who-card {
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #EAEDF3;
+  background: var(--light-bg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.who-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  background: linear-gradient(135deg, rgba(46,139,247,0.03), rgba(0,212,255,0.02));
+}
+.who-card:hover {
+  border-color: rgba(46,139,247,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(46, 139, 247, 0.06);
+}
+.who-card:hover::after { opacity: 1; }
+.who-card__icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+}
+.who-card__text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--dark-text);
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Section: CTA + Details ===== */
+.details {
+  background: var(--navy);
+  color: var(--white);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.details::before {
+  content: '';
+  position: absolute;
+  bottom: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 400px;
+  background: radial-gradient(ellipse, rgba(46,139,247,0.1), transparent 70%);
+}
+.details-table { margin-bottom: 64px; }
+.details-table__row {
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 0;
+  transition: background 0.3s;
+  border-radius: 4px;
+}
+.details-table__row:hover { background: rgba(255,255,255,0.02); }
+.details-table__label {
+  width: 120px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.details-table__value {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+}
+.selection-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 72px;
+  flex-wrap: wrap;
+}
+.selection-flow__step {
+  text-align: center;
+  padding: 28px 36px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  min-width: 170px;
+  transition: all 0.3s;
+  backdrop-filter: blur(4px);
+}
+.selection-flow__step:hover {
+  border-color: rgba(46,139,247,0.2);
+  background: rgba(46,139,247,0.04);
+}
+.selection-flow__step-label {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.selection-flow__step-text {
+  font-size: 14px;
+  font-weight: 700;
+}
+.selection-flow__arrow {
+  padding: 0 14px;
+  color: rgba(255,255,255,0.2);
+  font-size: 18px;
+}
+.final-cta {
+  text-align: center;
+  padding: 56px 0;
+}
+.final-cta .btn-primary--large {
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 6px 30px rgba(46, 139, 247, 0.4); }
+  50% { box-shadow: 0 6px 50px rgba(46, 139, 247, 0.6), 0 0 0 8px rgba(46, 139, 247, 0.1); }
+}
+.final-cta__notes {
+  margin-top: 28px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  line-height: 2;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--footer-bg);
+  color: rgba(255,255,255,0.3);
+  padding: 48px 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 2;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.footer__copy {
+  font-family: var(--font-en);
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* ===== Mobile Floating CTA ===== */
+.floating-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; width: 100%;
+  z-index: 999;
+  padding: 12px 16px;
+  background: rgba(15, 27, 45, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.floating-cta .btn-primary {
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 767px) {
+  .hero__badges { flex-direction: column; gap: 12px; }
+  .hero__badge { min-width: auto; }
+  .compare-table { grid-template-columns: 1fr; }
+  .compare-table__cell--giftee { border-left: none; border-top: 2px solid rgba(46,139,247,0.2); }
+  .timeline { gap: 0; }
+  .timeline__step { min-width: 130px; }
+  .day-card { flex-direction: column; gap: 12px; padding-left: 60px; }
+  .day-cards::before { left: 27px; }
+  .person-card { flex-direction: column; gap: 16px; }
+  .person-card__avatar { width: 80px; height: 80px; }
+  .voice-cards {
+    grid-template-columns: 1fr;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+  .voice-card {
+    min-width: 85vw;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  .stats-bar { gap: 32px; padding: 32px 24px; }
+  .selection-flow { flex-direction: column; gap: 0; }
+  .selection-flow__arrow { transform: rotate(90deg); padding: 10px 0; }
+  .details-table__row { flex-direction: column; gap: 6px; }
+  .details-table__label { width: auto; }
+  .floating-cta { display: block; }
+  body { padding-bottom: 72px; }
+  .program__note { padding-left: 60px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gap-cards { grid-template-columns: repeat(2, 1fr); }
+  .merit-cards { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Nav ===== -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <div class="nav__logo">
+      <span>giftee</span><span>&times;</span><span>Wivid</span>
+    </div>
+    <a href="#" class="btn-primary btn-primary--small" aria-label="選考にエントリーする">エントリーする</a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero__img"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__geo"></div>
+  <div class="hero__grid"></div>
+  <div class="hero__accent-line"></div>
+  <div class="container hero__content">
+    <p class="hero__presented">presented by giftee</p>
+    <h1 class="hero__title">サマーの前に、<br><span class="hero__title-accent">経営判断のリアル</span>を知る。</h1>
+    <p class="hero__subtitle">スタートアップとの「協業」で新規事業を創出する3日間。<br>選考通過率0.22%。東証プライム上場企業の代表取締役と、協業先CEOが審査する。</p>
+    <div class="hero__badges">
+      <div class="hero__badge">
+        <span class="hero__badge-number" data-target="0.22" data-suffix="%" data-decimals="2">0%</span>
+        <span class="hero__badge-label">選考通過率</span>
+      </div>
+      <div class="hero__badge">
+        <span class="hero__badge-number" data-target="15" data-suffix="名" data-decimals="0">0名</span>
+        <span class="hero__badge-label">限定</span>
+      </div>
+      <div class="hero__badge">
+        <span class="hero__badge-number" data-target="3" data-suffix="days" data-decimals="0" data-is-en="true">0days</span>
+        <span class="hero__badge-label">2026年5月</span>
+      </div>
+    </div>
+    <div class="hero__cta">
+      <a href="#" class="btn-primary btn-primary--large" aria-label="選考にエントリーする">選考にエントリーする &rarr;</a>
+    </div>
+    <a href="#why-now" class="hero__scroll">
+      <span class="hero__scroll-arrow">&darr;</span>なぜ今、このインターンなのか
+    </a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== Why Now ===== -->
+<section class="why-now" id="why-now">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--blue">WHY NOW</p>
+      <h2 class="section-heading">サマーインターンで勝ちたいなら、<br>サマーの「前」に動け。</h2>
+      <p class="section-lead">28卒のサマーインターン選考は6月に始まる。<br>その1ヶ月前の5月に、このインターンがある。<br>ここで得る経験が、サマーの結果を変える。</p>
+    </div>
+
+    <div class="timeline fade-in">
+      <div class="timeline__step">
+        <p class="timeline__step-time">NOW（3月）</p>
+        <p class="timeline__step-title">就活準備開始</p>
+      </div>
+      <div class="timeline__arrow">&rarr;</div>
+      <div class="timeline__step timeline__step--active">
+        <p class="timeline__step-time">5月上旬</p>
+        <p class="timeline__step-title">ギフティ<br>3daysインターン</p>
+        <p class="timeline__step-sub">&#9733; ここ</p>
+      </div>
+      <div class="timeline__arrow">&rarr;</div>
+      <div class="timeline__step">
+        <p class="timeline__step-time">6月〜</p>
+        <p class="timeline__step-title">サマー選考開始</p>
+      </div>
+      <div class="timeline__arrow">&rarr;</div>
+      <div class="timeline__step">
+        <p class="timeline__step-time">7月〜9月</p>
+        <p class="timeline__step-title">サマー本番参加</p>
+      </div>
+    </div>
+
+    <div class="merit-cards stagger">
+      <div class="merit-card fade-in">
+        <div class="merit-card__icon">&#127919;</div>
+        <h3 class="merit-card__title">サマー面接の「最高の弾」が手に入る</h3>
+        <p class="merit-card__text">「東証プライム上場企業で、協業先CEOに新規事業を提案した」。この経験を語れる大学2年生は、ほぼいない。</p>
+      </div>
+      <div class="merit-card fade-in">
+        <div class="merit-card__icon">&#129354;</div>
+        <h3 class="merit-card__title">選考を受けるだけで「実戦練習」になる</h3>
+        <p class="merit-card__text">面接2回の高難度選考。BIG4やメガベンチャーのサマー選考と同水準の思考力が問われる。落ちても、サマー選考の練習として価値がある。</p>
+      </div>
+      <div class="merit-card fade-in">
+        <div class="merit-card__icon">&#128205;</div>
+        <h3 class="merit-card__title">トップ層との比較で「自分の現在地」がわかる</h3>
+        <p class="merit-card__text">通過率0.22%を突破した15名と、3日間本気で取り組む。サマー前に「自分に何が足りないか」が明確になる。</p>
+      </div>
+      <div class="merit-card fade-in">
+        <div class="merit-card__icon">&#129309;</div>
+        <h3 class="merit-card__title">サマーを一緒に戦う「就活ネットワーク」ができる</h3>
+        <p class="merit-card__text">参加者はサマーインターンの選考を同時期に受ける仲間。3日間の濃密な経験が、その後の情報交換基盤になる。</p>
+      </div>
+      <div class="merit-card fade-in">
+        <div class="merit-card__icon">&#129517;</div>
+        <h3 class="merit-card__title">就活の「選ぶ基準」がサマー前に固まる</h3>
+        <p class="merit-card__text">事業開発・アライアンス・投資の世界を体感することで、サマーインターンの「どこを受けるか」が明確になる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== What's Different ===== -->
+<section class="whats-different" id="whats-different">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--blue">WHAT'S DIFFERENT</p>
+      <h2 class="section-heading">「新規事業を考えてください」は、<br>もうやったことがあるはず。<br>このインターンは、その先にある。</h2>
+      <p class="section-lead">多くのインターンは「白紙から事業を考える」0&rarr;1型。ギフティのインターンは違う。既存の経営資源と協業先のアセットを組み合わせ、「何に投じ、何をあえて選ばないか」を判断する——経営者が日常的に問われる意思決定を、学生が追体験する。</p>
+    </div>
+
+    <div class="compare-table fade-in">
+      <div class="compare-table__header compare-table__header--normal">一般的なインターン</div>
+      <div class="compare-table__header compare-table__header--giftee">ギフティインターン</div>
+
+      <div class="compare-table__cell compare-table__cell--normal">提案先：社内の審査員（人事・現場社員）</div>
+      <div class="compare-table__cell compare-table__cell--giftee">提案先：実際の協業先企業のCEO</div>
+
+      <div class="compare-table__cell compare-table__cell--normal">テーマ：白紙から新規事業を考える（0&rarr;1型）</div>
+      <div class="compare-table__cell compare-table__cell--giftee">テーマ：既存アセット&times;協業先で新規事業を構想する（Make or Buy or Ally）</div>
+
+      <div class="compare-table__cell compare-table__cell--normal">フィードバック：「良い視点ですね」で終わりがち</div>
+      <div class="compare-table__cell compare-table__cell--giftee">フィードバック：「自社の事業にとって意味があるか」という経営者目線で返ってくる</div>
+
+      <div class="compare-table__cell compare-table__cell--normal">提案のその後：基本的になし</div>
+      <div class="compare-table__cell compare-table__cell--giftee">提案のその後：優れた企画は事業化検討。長期インターンで事業開発に着手の可能性</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About Giftee ===== -->
+<section class="about-giftee" id="about-giftee">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--blue">ABOUT GIFTEE</p>
+      <h2 class="section-heading">「eギフトの会社」だと思っていませんか。</h2>
+      <p class="section-lead">ギフティは、eギフトを「人・企業・地域の間で価値を流通させるビジネスインフラ」として再定義し、法人マーケティング・地域創生・行政まで幅広い事業を展開する東証プライム上場企業です。</p>
+    </div>
+
+    <div class="gap-cards stagger">
+      <div class="gap-card fade-in">
+        <p class="gap-card__before">個人向けギフトの会社</p>
+        <div class="gap-card__arrow"></div>
+        <div class="gap-card__after">
+          <div class="gap-card__after-text"><strong>toC売上はわずか約3%</strong>売上の約8割は法人向け「giftee for Business」。累計66,000件超の導入案件。</div>
+        </div>
+      </div>
+      <div class="gap-card fade-in">
+        <p class="gap-card__before">国内のギフト事業</p>
+        <div class="gap-card__arrow"></div>
+        <div class="gap-card__after">
+          <div class="gap-card__after-text"><strong>4カ国でグローバル展開</strong>マレーシア・ベトナム・インドネシア・ドバイ（中東最大手YouGotaGiftを買収）。</div>
+        </div>
+      </div>
+      <div class="gap-card fade-in">
+        <p class="gap-card__before">普通のIT企業</p>
+        <div class="gap-card__arrow"></div>
+        <div class="gap-card__after">
+          <div class="gap-card__after-text"><strong>GMV前年比+74%、売上+32%成長</strong>東証プライム上場。12社のグループ会社。HD体制移行中。M&amp;Aを「プロセス」として管理。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar fade-in">
+      <div class="stats-bar__item">
+        <div class="stats-bar__number">95.5<span>億円</span></div>
+        <div class="stats-bar__label">売上高（+32%）</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number">226<span>自治体</span></div>
+        <div class="stats-bar__label">旅先納税&reg;導入数</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number">12<span>社</span></div>
+        <div class="stats-bar__label">グループ会社数</div>
+      </div>
+    </div>
+
+    <div class="about-giftee__note fade-in">
+      ギフティは、投資先との事業開発（協業）を成長の原動力にしてきた。WEDへの出資でレシートデータ&times;マーケティング基盤を構築し、orosyの関連会社化でモノ領域の流通を拡張し、YouGotaGiftの買収で中東市場を一気に獲得した。<br><br>このインターンでは、その「協業で事業を創る」意思決定構造に、参加者として直接触れることになる。
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== Program ===== -->
+<section class="program" id="program">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--blue">PROGRAM</p>
+      <h2 class="section-heading">スタートアップとの協業案を策定し、<br>新規事業を創出せよ。</h2>
+      <p class="section-lead">3日間で、ギフティの実際の協業先に向けて事業案を創出する。検討にとどまらず、協業先への新規事業提案まで行う。</p>
+    </div>
+
+    <div class="day-cards">
+      <div class="day-card fade-in">
+        <div class="day-card__day">DAY 1</div>
+        <div>
+          <h3 class="day-card__title">テーマ発表・チーム編成</h3>
+          <p class="day-card__text">ギフティの事業構造と協業戦略のインプット。協業先のアセットを理解し、事業案の仮説構築を開始。</p>
+        </div>
+      </div>
+      <div class="day-card fade-in">
+        <div class="day-card__day">DAY 2</div>
+        <div>
+          <h3 class="day-card__title">事業案の深化・メンターFB</h3>
+          <p class="day-card__text">プロダクト・市場・数字を行き来しながら、「どこに資源を投じ、どこをあえて選ばないか」を詰める。メンターからのフィードバックで仮説を磨き込む。</p>
+        </div>
+      </div>
+      <div class="day-card fade-in">
+        <div class="day-card__day">DAY 3</div>
+        <div>
+          <h3 class="day-card__title">最終プレゼン・審査</h3>
+          <p class="day-card__text">ギフティ代表取締役2名と協業先CEOに事業提案。経営判断の目線でフィードバックを受ける。優れた企画は事業化を検討。</p>
+        </div>
+      </div>
+    </div>
+    <p class="program__note fade-in">※ 上記は想定プログラムです。詳細は参加確定後にお知らせします。</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== Mentors & Judges ===== -->
+<section class="mentors" id="mentors">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--gold">MENTORS &amp; JUDGES</p>
+      <h2 class="section-heading">フィードバックするのは、<br>事業を創ってきた当事者たち。</h2>
+    </div>
+
+    <div class="person-group fade-in">
+      <p class="person-group__title">JUDGES — 審査員</p>
+      <div class="person-cards">
+        <div class="person-card">
+          <div class="person-card__avatar"><img src="ota.jpg" alt="太田 睦"></div>
+          <div class="person-card__info">
+            <h3 class="person-card__name">太田 睦</h3>
+            <p class="person-card__name-reading">おおた むつみ</p>
+            <p class="person-card__role">代表取締役</p>
+            <p class="person-card__bio">慶應義塾大学総合政策学部卒業後、アクセンチュアに新卒入社。2010年ギフティを設立、代表取締役に就任。海外事業の管掌役員として、自らASEAN・ドバイ支社に出向き、現地駐在社員と事業開発に関わる。</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"><img src="suzuki.jpg" alt="鈴木 達哉"></div>
+          <div class="person-card__info">
+            <h3 class="person-card__name">鈴木 達哉</h3>
+            <p class="person-card__name-reading">すずき たつや</p>
+            <p class="person-card__role">代表取締役</p>
+            <p class="person-card__bio">一橋大学経済学部卒業後、成毛眞氏が創業したインスパイアに新卒入社。大企業の新規事業支援やベンチャー支援に従事。2011年 WACUL共同創業。2020年ギフティ代表取締役に就任。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="person-group fade-in">
+      <p class="person-group__title">MENTORS — メンター</p>
+      <div class="person-cards">
+        <div class="person-card">
+          <div class="person-card__avatar"><img src="kumagai.jpg" alt="熊谷 優作"></div>
+          <div class="person-card__info">
+            <h3 class="person-card__name">熊谷 優作</h3>
+            <p class="person-card__name-reading">くまがい ゆうさく</p>
+            <p class="person-card__role">giftee for Business 新規事業責任者</p>
+            <p class="person-card__bio">北海道大学卒業後、2021年ギフティ入社。法人向けサービスのセールス・プロダクト開発・事業開発に従事。2023年「Corporate Gift」事業を新規立ち上げ。ニーズ探索&rarr;仮説検証&rarr;プロダクトリリースを一貫して主導。</p>
+          </div>
+        </div>
+        <div class="person-card person-card--highlight">
+          <span class="person-card__badge">テーマの当事者</span>
+          <div class="person-card__avatar"><img src="hironaka.jpg" alt="弘中 秀佑"></div>
+          <div class="person-card__info">
+            <h3 class="person-card__name">弘中 秀佑</h3>
+            <p class="person-card__name-reading">ひろなか しゅうすけ</p>
+            <p class="person-card__role">Corporate Business Development</p>
+            <p class="person-card__bio">慶應義塾大学理工学研究科卒業後、2023年新卒入社。新卒3年目で出資先WED社のアセットを活用したメーカー向けプロモーションプラットフォームを新規立ち上げ中。</p>
+            <p class="person-card__highlight-text">&#9733; インターンのテーマ「協業による事業創出」を現在進行形で担う当事者。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mentors__note fade-in">
+      新卒3年目で、出資先との協業による新規事業立ち上げを任される。<br>この会社の「若手への期待値」が、メンターの経歴に表れている。
+    </div>
+  </div>
+</section>
+
+<!-- ===== Voice ===== -->
+<section class="voice" id="voice">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--blue">VOICE</p>
+      <h2 class="section-heading">過去参加者の声</h2>
+    </div>
+
+    <div class="voice-cards stagger">
+      <div class="voice-card fade-in">
+        <div class="voice-card__quote-mark">&ldquo;</div>
+        <h3 class="voice-card__title">「プロダクト提案」ではなく、「事業判断」を考え切る経験</h3>
+        <p class="voice-card__text">長期インターンでも提案資料を作る機会はありましたが、いずれもプロダクト前提の発想でした。本インターンでは、アライアンスという視点で事業を捉え直す必要があり、これまでにない思考回路を使いました。プラットフォーム全体の構造を考える経験は初めてで、視座が大きく引き上げられたと感じています。</p>
+        <p class="voice-card__author">&mdash; Aさん（京都大学 / 医学部）</p>
+      </div>
+      <div class="voice-card fade-in">
+        <div class="voice-card__quote-mark">&ldquo;</div>
+        <h3 class="voice-card__title">「GDやジョブ」とは別次元の、思考の負荷</h3>
+        <p class="voice-card__text">新規事業を考えるだけでなく、協業先とのシナジーの中で成立させるという点が非常に難しく、今までにない頭の使い方を求められました。GDやケースとは異なり、深く、逃げ場のない思考を試されるインターンです。チームで脳がちぎれるまで考え抜いた3日間でした。</p>
+        <p class="voice-card__author">&mdash; Bさん（京都大学 / 経済学部）</p>
+      </div>
+      <div class="voice-card fade-in">
+        <div class="voice-card__quote-mark">&ldquo;</div>
+        <h3 class="voice-card__title">「事業を創る」とは何かを、身体で理解した</h3>
+        <p class="voice-card__text">事業づくりを学びたいと思い参加しましたが、単に知識を得るだけでなく、自分の課題とその乗り越え方まで明確になりました。メンターや参加学生のレベルも非常に高く、自分の考えの甘さを痛感しました。今後どの方向に努力すべきかが、はっきり見えた経験でした。</p>
+        <p class="voice-card__author">&mdash; Cさん（慶應義塾大学 / 法学部）</p>
+      </div>
+    </div>
+
+    <div class="destinations fade-in">
+      <h3 class="destinations__title">過去参加者の内定先</h3>
+      <div class="destinations__list">
+        <span class="destinations__badge">ゴールドマン・サックス</span>
+        <span class="destinations__badge">バンク・オブ・アメリカ</span>
+        <span class="destinations__badge">三菱商事</span>
+        <span class="destinations__badge">マッキンゼー</span>
+        <span class="destinations__badge">BCG</span>
+        <span class="destinations__badge">ベイン</span>
+        <span class="destinations__badge">A.T.カーニー</span>
+        <span class="destinations__badge">ジャフコ</span>
+        <span class="destinations__badge">アクセンチュア</span>
+        <span class="destinations__badge">Deloitte</span>
+        <span class="destinations__badge">PwC</span>
+        <span class="destinations__badge">博報堂</span>
+        <span class="destinations__badge">リクルート</span>
+        <span class="destinations__badge">DeNA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== Who Should Apply ===== -->
+<section class="who" id="who">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label section-label--blue">WHO SHOULD APPLY</p>
+      <h2 class="section-heading">こんな人に、挑戦してほしい。</h2>
+    </div>
+    <div class="who-cards stagger">
+      <div class="who-card fade-in">
+        <div class="who-card__icon">&#128161;</div>
+        <p class="who-card__text">「何をやるか」だけでなく「何をやらないか」まで含めて意思決定したい</p>
+      </div>
+      <div class="who-card fade-in">
+        <div class="who-card__icon">&#128202;</div>
+        <p class="who-card__text">プロダクト・市場・数字を行き来し、ボトルネックと次の一手を考えたい</p>
+      </div>
+      <div class="who-card fade-in">
+        <div class="who-card__icon">&#127959;&#65039;</div>
+        <p class="who-card__text">一時的な施策ではなく、構造として価値が積み上がる事業に興味がある</p>
+      </div>
+      <div class="who-card fade-in">
+        <div class="who-card__icon">&#127760;</div>
+        <p class="who-card__text">将来、事業開発・アライアンス・投資・M&amp;Aで意思決定を担う人材を目指したい</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Details + CTA ===== -->
+<section class="details" id="details">
+  <div class="container">
+    <div class="fade-in">
+      <h2 class="section-heading">開催概要</h2>
+    </div>
+
+    <div class="details-table fade-in">
+      <div class="details-table__row">
+        <div class="details-table__label">対象</div>
+        <div class="details-table__value">2028年3月までに大学・大学院卒業（見込み）<br>海外大は2027年9月まで卒業見込み</div>
+      </div>
+      <div class="details-table__row">
+        <div class="details-table__label">日程</div>
+        <div class="details-table__value">2026年5月上旬予定・3日間</div>
+      </div>
+      <div class="details-table__row">
+        <div class="details-table__label">定員</div>
+        <div class="details-table__value">約15名</div>
+      </div>
+      <div class="details-table__row">
+        <div class="details-table__label">場所</div>
+        <div class="details-table__value">ギフティ本社オフィス<br>東京都品川区東五反田二丁目10番2号 東五反田スクエア11F</div>
+      </div>
+      <div class="details-table__row">
+        <div class="details-table__label">待遇</div>
+        <div class="details-table__value">交通費全額支給<br>一都三県以外の参加者は宿泊提供</div>
+      </div>
+    </div>
+
+    <div class="selection-flow fade-in">
+      <div class="selection-flow__step">
+        <p class="selection-flow__step-label">STEP 1</p>
+        <p class="selection-flow__step-text">エントリー</p>
+      </div>
+      <div class="selection-flow__arrow">&rarr;</div>
+      <div class="selection-flow__step">
+        <p class="selection-flow__step-label">STEP 2</p>
+        <p class="selection-flow__step-text">面接（2回）</p>
+      </div>
+      <div class="selection-flow__arrow">&rarr;</div>
+      <div class="selection-flow__step">
+        <p class="selection-flow__step-label">STEP 3</p>
+        <p class="selection-flow__step-text">3daysインターン参加</p>
+      </div>
+    </div>
+
+    <div class="final-cta fade-in">
+      <a href="#" class="btn-primary btn-primary--large" aria-label="選考にエントリーする">選考にエントリーする &rarr;</a>
+      <div class="final-cta__notes">
+        ※ 選考についての詳細はエントリー後にご案内します<br>
+        ※ ご不明点があればCDにお気軽にご相談ください
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>本ページはウィビッド株式会社が運営しています。<br>インターンシップに関するお問い合わせはCDにご連絡ください。</p>
+    <p class="footer__copy">&copy; 2026 Wivid Inc.</p>
+  </div>
+</footer>
+
+<!-- ===== Mobile Floating CTA ===== -->
+<div class="floating-cta" id="floatingCta">
+  <a href="#" class="btn-primary" aria-label="選考にエントリーする">選考にエントリーする &rarr;</a>
+</div>
+
+<script>
+// === Nav shadow on scroll ===
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// === Fade-in on scroll (with stagger support) ===
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// === Count-up animation ===
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const decimals = parseInt(el.dataset.decimals) || 0;
+      const duration = 1500;
+      const start = performance.now();
+
+      const animate = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Smooth ease-out cubic
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const current = eased * target;
+        const formatted = decimals > 0 ? current.toFixed(decimals) : Math.round(current);
+        el.textContent = formatted + suffix;
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+      countObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.hero__badge-number').forEach(el => countObserver.observe(el));
+
+// === Mobile floating CTA visibility ===
+const floatingCta = document.getElementById('floatingCta');
+const heroSection = document.getElementById('hero');
+if (window.matchMedia('(max-width: 767px)').matches) {
+  floatingCta.style.transform = 'translateY(100%)';
+  const floatObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      floatingCta.style.transform = entry.isIntersecting ? 'translateY(100%)' : 'translateY(0)';
+      floatingCta.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+    });
+  }, { threshold: 0.3 });
+  floatObserver.observe(heroSection);
+}
+
+// === Subtle parallax for hero image ===
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      const heroImg = document.querySelector('.hero__img');
+      if (heroImg && scrollY < window.innerHeight) {
+        heroImg.style.transform = `translateY(${scrollY * 0.3}px) scale(1.05)`;
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+</script>
+</body>
+</html>
