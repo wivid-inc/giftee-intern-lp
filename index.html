@@ -19,7 +19,7 @@ body {
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  background: #0F1B2D;
+  background: #1A1018;
 }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -27,21 +27,21 @@ ul { list-style: none; }
 
 /* ===== Variables ===== */
 :root {
-  --navy: #0F1B2D;
-  --navy-light: #142236;
-  --deep-blue: #1A3A5C;
-  --bright-blue: #2E8BF7;
-  --bright-blue-light: #5BA3F9;
-  --cyan: #00D4FF;
+  --navy: #1A1018;
+  --navy-light: #221620;
+  --deep-blue: #2D1A28;
+  --bright-blue: #F08B71;
+  --bright-blue-light: #F4A38D;
+  --cyan: #F9C4B8;
   --white: #FFFFFF;
   --dark-text: #1A1A2E;
-  --light-bg: #F5F6FA;
-  --gold: #E8B94A;
-  --gold-dim: #D4A853;
-  --footer-bg: #080E18;
+  --light-bg: #FBF7F6;
+  --gold: #3B82F6;
+  --gold-dim: #2563EB;
+  --footer-bg: #0E080C;
   --font-en: 'Inter', sans-serif;
-  --gradient-blue: linear-gradient(135deg, #2E8BF7, #00D4FF);
-  --gradient-gold: linear-gradient(135deg, #E8B94A, #F0D68A);
+  --gradient-blue: linear-gradient(135deg, #E07058, #F08B71);
+  --gradient-gold: linear-gradient(135deg, #3B82F6, #60A5FA);
   --card-border: rgba(255,255,255,0.06);
   --card-bg: rgba(255,255,255,0.03);
 }
@@ -158,7 +158,7 @@ ul { list-style: none; }
   position: fixed;
   top: 0; left: 0; width: 100%;
   z-index: 1000;
-  background: rgba(15, 27, 45, 0.8);
+  background: rgba(26, 16, 24, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.3s;
@@ -169,7 +169,7 @@ ul { list-style: none; }
 }
 .nav.scrolled {
   box-shadow: 0 4px 30px rgba(0,0,0,0.3);
-  background: rgba(15, 27, 45, 0.95);
+  background: rgba(26, 16, 24, 0.95);
 }
 .nav__inner {
   display: flex;
@@ -218,7 +218,7 @@ ul { list-style: none; }
 .hero__overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(135deg, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.75) 40%, rgba(15,27,45,0.6) 70%, rgba(15,27,45,0.85) 100%);
+    linear-gradient(135deg, rgba(26,16,24,0.92) 0%, rgba(26,16,24,0.75) 40%, rgba(26,16,24,0.6) 70%, rgba(26,16,24,0.85) 100%);
 }
 /* Geometric accent shapes */
 .hero__geo {
@@ -302,7 +302,7 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 .hero__badge {
-  background: rgba(15,27,45,0.5);
+  background: rgba(26,16,24,0.5);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
   padding: 24px 32px;
@@ -314,7 +314,7 @@ ul { list-style: none; }
 }
 .hero__badge:hover {
   border-color: rgba(46,139,247,0.4);
-  background: rgba(15,27,45,0.65);
+  background: rgba(26,16,24,0.65);
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 .hero__badge-number {
@@ -1170,7 +1170,7 @@ ul { list-style: none; }
   bottom: 0; left: 0; width: 100%;
   z-index: 999;
   padding: 12px 16px;
-  background: rgba(15, 27, 45, 0.95);
+  background: rgba(26, 16, 24, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255,255,255,0.08);
